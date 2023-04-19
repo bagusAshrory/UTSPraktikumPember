@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class Adapternya (private val listFootball: ArrayList<DataPemainChelsea>, private val context: Context
+class Adapternya (private val listPemainChelsea: ArrayList<DataPemainChelsea>, private val context: Context
 ): RecyclerView.Adapter<Adapternya.CourseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapternya.CourseViewHolder {
@@ -20,14 +20,14 @@ class Adapternya (private val listFootball: ArrayList<DataPemainChelsea>, privat
     }
 
     override fun onBindViewHolder(holder: Adapternya.CourseViewHolder, position: Int) {
-        holder.nama.text = listFootball.get(position).Name
-        holder.nim.text = listFootball.get(position).Nim
-        holder.umur.text = listFootball.get(position).Age
-        holder.gambar.setImageResource(listFootball.get(position).Img)
+        holder.nama.text = listPemainChelsea.get(position).Name
+        holder.nim.text = listPemainChelsea.get(position).Nim
+        holder.umur.text = listPemainChelsea.get(position).Age
+        holder.gambar.setImageResource(listPemainChelsea.get(position).Img)
     }
 
     override fun getItemCount(): Int {
-        return listFootball.size
+        return listPemainChelsea.size
     }
 
     class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
